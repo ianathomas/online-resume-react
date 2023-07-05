@@ -6,6 +6,8 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [resumes, setResumes] = useState([]);
+  const [isResumesShowVisible, setIsResumesShowVisible] = useState(false);
+  const [currentResume, setCurrentResume] = useState();
 
   const dummydata = [
     { id: 1, name: "aaa", quantity: 1 },
@@ -13,14 +15,14 @@ function App() {
     { id: 3, name: "ccc", quantity: 3 },
   ];
   const handleShowResume = (resume) => {
-    console.log("handleShowPhoto", resume);
+    console.log("handleShowResume", resume);
     setIsResumesShowVisible(true);
     setCurrentResume(resume);
   };
 
   const handleClose = () => {
     console.log("handleClose");
-    setIsPhotosShowVisible(false);
+    setIsResumesShowVisible(false);
   };
 
   const handleSetResumes = () => {
@@ -37,7 +39,13 @@ function App() {
   return (
     <div>
       <Header />
-      <Content resumes={resumes} />
+      <Content
+        resumes={resumes}
+        isResumesShowVisible={isResumesShowVisible}
+        currentResume={currentResume}
+        handleShowResume={handleShowResume}
+        handleClose={handleClose}
+      />
       <Footer />
     </div>
   );
