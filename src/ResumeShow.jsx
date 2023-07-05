@@ -9,6 +9,8 @@ export function ResumeShow(props) {
       <p>Name: {props.resume.name}</p>
       <p>Qty: {props.resume.quantity}</p>
       <p>Tweet: {randomWords} </p>
+      <p>Tweet: {randomWords} </p>
+      <p>Tweet: {randomWords} </p>
     </div>
   );
 }
