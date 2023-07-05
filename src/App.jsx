@@ -12,6 +12,16 @@ function App() {
     { id: 2, name: "bbb", quantity: 2 },
     { id: 3, name: "ccc", quantity: 3 },
   ];
+  const handleShowResume = (resume) => {
+    console.log("handleShowPhoto", resume);
+    setIsResumesShowVisible(true);
+    setCurrentResume(resume);
+  };
+
+  const handleClose = () => {
+    console.log("handleClose");
+    setIsPhotosShowVisible(false);
+  };
 
   const handleSetResumes = () => {
     // axios.get(`http://localhost:3000`).then((response) => {

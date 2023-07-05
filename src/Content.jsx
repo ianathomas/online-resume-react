@@ -1,23 +1,22 @@
-export function Content() {
+import { ResumeIndex } from "./ResumeIndex";
+import { ResumesShow } from "./ResumesShow";
+
+export function Content(props) {
   return (
     <div>
       <h1>Welcome to React!</h1>
+      <ResumeIndex resumes={props.resumes} />
     </div>
   );
 }
 
-
-
-const handleShowPhoto = (photo) => {
-console.log("handleShowPhoto", photo);
-setIsPhotosShowVisible(true);
-setCurrentPhoto(photo);
-};
-  
-const handleClose = () => {
-console.log("handleClose");
-setIsPhotosShowVisible(false);
-};
-
-  <PhotosIndex photos={photos} onShowPhoto={handleShowPhoto} />
-  <Modal show={isPhotosShowVisible} onClose={handleClose}></Modal>
+export function Content() {
+  return (
+    <div>
+      <h1>Welcome to React!</h1>
+      <ResumeIndex Resume={photos} onResumeIndex={handleResumeIndex} />
+      <Modal show={isResumesShowVisible} onClose={handleClose}></Modal>
+      <Resumehow photo={currentResume} />
+    </div>
+  );
+}
