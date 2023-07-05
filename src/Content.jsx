@@ -1,16 +1,7 @@
-+ import { Modal } from "./Modal";
- 
- 
- const [isPhotosShowVisible, setIsPhotosShowVisible] = useState(false);
- const [currentPhoto, setCurrentPhoto] = useState({});
-
 export function Content() {
   return (
     <div>
       <h1>Welcome to React!</h1>
-      +       <Modal show={true}>
-+         <h1>Test</h1>
-+       </Modal>
     </div>
   );
 }
