@@ -1,3 +1,38 @@
 html {
   scroll-behavior: smooth;
 }
+
+.navbar {
+  background-color: #e3f2fd;
+}
+
+.navbar-brand {
+  color: white
+}
+
+.container-fluid {
+  box-shadow: 5px 5px 5px lightblue;
+}
+
+a.nav-link:hover, a.nav-link:active {
+  font-size: 125%;
+  box-shadow: 5px 3px 5px lightblue;
+}
+
+#root {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+button {
+  background-color: #e3f2fd;
+  box-shadow: 5px 3px 5px lightblue;
+}
+
+button:hover, button:active {
+  font-size: 125%;
+  box-shadow: 5px 3px 5px lightblue;
+}
+
+#root {
+  background-image: url('https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=1380&t=st=1688667114~exp=1688667714~hmac=aeb538c76f3d90bc5808a306a395d0c2740839c6cea170492c76fa27ec6dd169');
+}

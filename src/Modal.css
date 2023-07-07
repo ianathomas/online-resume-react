@@ -1,3 +1,102 @@
+/guide_react_crud.md
+File metadata and controls
+
+Preview
+
+Code
+
+Blame
+943 lines (759 loc) · 26.8 KB
+Guide: React CRUD practice
+Backend setup
+In your terminal, navigate to your Rails backend app and run your server: rails server
+Make sure each RESTful route (index, create, show, update, destroy) is working by manually testing each request.
+Make sure to configure the rack-cors gem to allow web requests from localhost:5173 (instructions here).
+Frontend setup
+In a new terminal window, navigate to your Actualize directory and create a new project:
+
+npm create vite@latest
+When prompted, enter a project name, select the React framework, select the JavaScript variant
+
+In the terminal, go to your new directory, install the dependencies, and start the dev server:
+
+cd <name-of-your-app>
+npm install
+npm run dev
+In a new terminal tab, install the axios library:
+
+npm install axios --save
+In the terminal, open your text editor for the frontend app:
+
+code .
+In your text editor, make a new file src/Header.jsx:
+
+export function Header() {
+  return (
+    <header>
+      <nav>
+        <a href="#">Home</a> | <a href="#">Link</a>
+      </nav>
+    </header>
+  );
+}
+In your text editor, make a new file src/Content.jsx:
+
+export function Content() {
+  return (
+    <div>
+      <h1>Welcome to React!</h1>
+    </div>
+  );
+}
+In your text editor, make a new file src/Footer.jsx:
+
+export function Footer() {
+  return (
+    <footer>
+      <p>Copyright 2022</p>
+    </footer>
+  );
+}
+In your text editor, open the file src/App.jsx and replace the code with the following:
+
+import { Header } from "./Header";
+import { Content } from "./Content";
+import { Footer } from "./Footer";
+
+function App() {
+  return (
+    <div>
+      <Header />
+      <Content />
+      <Footer />
+    </div>
+  );
+}
+
+export default App;
+In your text editor, open the file src/index.css and replace all the CSS code with the following:
+
+html {
+  scroll-behavior: smooth;
+}
+CRUD Single Page Application
+Index action
+
+Make a new src/PhotosIndex.jsx file that returns placeholder HTML
+In src/Content.jsx, import the src/PhotosIndex.jsx component
+Check the browser to see the placeholder HTML from the index component.
+
+In src/Content.jsx, pass placeholder data to the index component as props
+In src/PhotosIndex.jsx, map through the array given in props
+Check the browser to see the placeholder data in the index component.
+
+In src/Content.jsx, use the useState and useEffect hooks to define the data via a backend web request
+Check the browser to see the real data from the backend in the index component.
+
+Show action
+
+Make a new src/Modal.css file with the following content:
 .modal-background {
   display: block;
   position: fixed;
