@@ -82,6 +82,9 @@ export function ResumeShow(props) {
       <p>Tweet: {randomTweet1} </p>
       <p>Tweet: {randomTweet2} </p>
       <p>Tweet: {randomTweet3} </p>
+      <button onClick={() => (window.location.href = `http://localhost:5173/students/${props.resume.id}/edit`)}>
+        Update
+      </button>
     </div>
   );
 }
