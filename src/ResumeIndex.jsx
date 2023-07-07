@@ -1,22 +1,22 @@
 export function ResumeIndex(props) {
   return (
     <>
-      {/* <h1> All Resumes </h1>
-      {props.resumes.map((resume) => (
-        <div key={resume.id}>
-          <h1> {resume.student.first_name} </h1>
-          <p> {resume.student.last_name} </p>
-          <p> {resume.student.email} </p>
-          <p> {resume.student.phone_number} </p>
-          <p> {resume.student.short_bio} </p>
-          <p> {resume.student.linkedin_url} </p>
-          <p> {resume.student.twitter_handle} </p>
-          <p> {resume.student.personal_website_url} </p>
-          <p> {resume.student.online_resume_url} </p>
-          <p> {resume.student.github_url} </p>
-          <img src={resume.student.photo}></img>
+      <h1> All Resumes </h1>
+      {props.resumes.map((student) => (
+        <div key={student.id}>
+          <h1> {student.first_name} </h1>
+          <p> {student.last_name} </p>
+          <p> {student.email} </p>
+          <p> {student.phone_number} </p>
+          <p> {student.short_bio} </p>
+          <p> {student.linkedin_url} </p>
+          <p> {student.twitter_handle} </p>
+          <p> {student.personal_website_url} </p>
+          <p> {student.online_resume_url} </p>
+          <p> {student.github_url} </p>
+          <img src={student.photo}></img>
           <p></p>
-          {resume.student.experiences.map((experience) => (
+          {/* {student.experiences.map((experience) => (
             <div key={experience.id}>
               <p> {experience.start_date} </p>
               <p> {experience.end_date} </p>
@@ -26,7 +26,7 @@ export function ResumeIndex(props) {
               <p></p>
             </div>
           ))}
-          {resume.student.educations.map((education) => (
+          {student.educations.map((education) => (
             <div key={education.id}>
               <p> {education.start_date} </p>
               <p> {education.end_date} </p>
@@ -36,33 +36,24 @@ export function ResumeIndex(props) {
               <p></p>
             </div>
           ))}
-          {resume.student.skills.map((skill) => (
+          {student.skills.map((skill) => (
             <div key={skill.id}>
-              <p> {resume.student.skills.name} </p>
+              <p> {skill.name} </p>
               <p></p>
             </div>
           ))}
-          {resume.student.capstones.map((capstone) => (
+          {student.capstones.map((capstone) => (
             <div key={capstone.id}>
-              <p> {resume.student.capstones.details} </p>
-              <p> {resume.student.capstones.description} </p>
-              <p> {resume.student.capstones.url} </p>
-              <p> {resume.student.capstones.screenshot} </p>
+              <p> {capstone.details} </p>
+              <p> {capstone.description} </p>
+              <p> {capstone.url} </p>
+              <p> {capstone.screenshot} </p>
+              <p></p>
             </div>
-          ))}
-          <button onClick={() => props.handleShowResume(resume)}>More info</button>
+          ))} */}
+          <button onClick={() => props.handleShowResume(student)}>More info</button>
         </div>
-      ))} */}
-      <>
-        <h1> All Resumes </h1>
-        {props.resumes.map((resume) => (
-          <div key={resume.id}>
-            <h1> {resume.name} </h1>
-            <p> {resume.quantity} </p>
-            <button onClick={() => props.handleShowResume(resume)}>More info</button>
-          </div>
-        ))}
-      </>
+      ))}
     </>
   );
 }
