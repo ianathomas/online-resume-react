@@ -20,6 +20,9 @@ export function ResumeShow(props) {
       <p> {props.resume.github_url} </p>
       <img src={props.resume.photo}></img>
       <p></p>
+      <p>Tweet: {randomTweet1} </p>
+      <p>Tweet: {randomTweet2} </p>
+      <p>Tweet: {randomTweet3} </p>
     </div>
   );
 }
