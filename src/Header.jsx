@@ -24,17 +24,17 @@ export function Header() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="http://localhost:5173/signup">
                 Signup
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="http://localhost:5173/login">
                 Login
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="http://localhost:5173/logoutlink">
                 Logout
               </a>
             </li>
