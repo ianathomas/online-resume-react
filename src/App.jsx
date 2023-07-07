@@ -26,15 +26,15 @@ function App() {
   };
 
   const handleSetResumes = () => {
-    // axios.get(`http://localhost:3000`).then((response) => {
+    // axios.get(`http://localhost:3000/resumes.json`).then((response) => {
     //   console.log("handleSetResumes");
     //   setResumes(response.data);
-    // })
+    // });
     console.log("handleSetResumes");
     setResumes(dummydata);
   };
 
-  useEffect(handleSetResumes);
+  useEffect(handleSetResumes, []);
 
   return (
     <div>
