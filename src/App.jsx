@@ -3,6 +3,7 @@ import { Content } from "./Content";
 import { Footer } from "./Footer";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   const [resumes, setResumes] = useState([]);
@@ -38,15 +39,17 @@ function App() {
 
   return (
     <div>
-      <Header />
-      <Content
-        resumes={resumes}
-        isResumesShowVisible={isResumesShowVisible}
-        currentResume={currentResume}
-        handleShowResume={handleShowResume}
-        handleClose={handleClose}
-      />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Content
+          resumes={resumes}
+          isResumesShowVisible={isResumesShowVisible}
+          currentResume={currentResume}
+          handleShowResume={handleShowResume}
+          handleClose={handleClose}
+        />
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
