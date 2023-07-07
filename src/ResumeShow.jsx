@@ -8,11 +8,18 @@ export function ResumeShow(props) {
   return (
     <div>
       <h1>Resume information</h1>
-      <p>Name: {props.resume.name}</p>
-      <p>Qty: {props.resume.quantity}</p>
-      <p>Tweet: {randomTweet1} </p>
-      <p>Tweet: {randomTweet2} </p>
-      <p>Tweet: {randomTweet3} </p>
+      <h1> {props.resume.first_name} </h1>
+      <p> {props.resume.last_name} </p>
+      <p> {props.resume.email} </p>
+      <p> {props.resume.phone_number} </p>
+      <p> {props.resume.short_bio} </p>
+      <p> {props.resume.linkedin_url} </p>
+      <p> {props.resume.twitter_handle} </p>
+      <p> {props.resume.personal_website_url} </p>
+      <p> {props.resume.online_resume_url} </p>
+      <p> {props.resume.github_url} </p>
+      <img src={props.resume.photo}></img>
+      <p></p>
     </div>
   );
 }
